@@ -1,0 +1,16 @@
+from textblob import TextBlob
+
+# Input paragraph from the user
+paragraph = input("Enter a paragraph with grammatical errors: ")
+
+# Create a TextBlob object
+blob = TextBlob(paragraph)
+
+# Correct the grammar
+corrected_paragraph = str(blob.correct())
+
+# Print the original and corrected paragraphs
+print("\nOriginal Paragraph:")
+print(paragraph)
+print("\nCorrected Paragraph:")
+print(corrected_paragraph)
